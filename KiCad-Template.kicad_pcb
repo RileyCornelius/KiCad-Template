@@ -3,7 +3,7 @@
 	(generator "pcbnew")
 	(generator_version "9.0")
 	(general
-		(thickness 1.6)
+		(thickness 1.6062)
 		(legacy_teardrops no)
 	)
 	(paper "A4")
@@ -53,29 +53,29 @@
 			)
 			(layer "dielectric 1"
 				(type "prepreg")
-				(thickness 0.1)
+				(thickness 0.2104)
 				(material "FR4")
 				(epsilon_r 4.5)
 				(loss_tangent 0.02)
 			)
 			(layer "In1.Cu"
 				(type "copper")
-				(thickness 0.035)
+				(thickness 0.0152)
 			)
 			(layer "dielectric 2"
 				(type "core")
-				(thickness 1.24)
+				(thickness 1.065)
 				(material "FR4")
 				(epsilon_r 4.5)
 				(loss_tangent 0.02)
 			)
 			(layer "In2.Cu"
 				(type "copper")
-				(thickness 0.035)
+				(thickness 0.0152)
 			)
 			(layer "dielectric 3"
 				(type "prepreg")
-				(thickness 0.1)
+				(thickness 0.2104)
 				(material "FR4")
 				(epsilon_r 4.5)
 				(loss_tangent 0.02)
@@ -95,7 +95,7 @@
 				(type "Bottom Silk Screen")
 			)
 			(copper_finish "None")
-			(dielectric_constraints no)
+			(dielectric_constraints yes)
 		)
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
@@ -998,6 +998,23 @@
 	(embedded_files
 		(file
 			(name "KiCad-Template.kicad_wks")
+			(type worksheet)
+			(data |KLUv/WBPCK0SAEYZUSAQ1Q5qMaSOoRmHY7zfg9LTgIC0w162yfT6+B4RQOgA4EgAQwBIAJj7cby/
+				+EjVriZn3iKC3IojVatmH4nlh/wLAEBA0PG8l7PaJm8SLe6NnYkv+d916xhK626LTsqWFMvrnwIg
+				ICg3IM/yheKmECXZ+ZB3XE898Yf8wa/TqpRnZXDNwXgpCt3QipT/845fi/Xr9pLhj5P/fl9OH3qE
+				64md89kP/XLIfxLskJ/BiHc2WzGYD2IZSZC3ymLsqiXHYyFZUBQREoG5j0c0DZuUzlpV3rStwq5K
+				73XvJbr+1kMWXcQvPZpKua2DiFaeFkhBkM62CoC35KW5Ug4BATVrxXGAMHfJzHuoiy86M1pl3Yxu
+				0dGMWrRqmMXWx9DHobO7spq3rdq6cygajQeCRJhVpim6Q8JTTCSSxX+J7u5Muyg2MJQGHnug8ViE
+				mAyNpiDJMgaQRMSkqhvd4ZNoAOMm72kFiYhXSrvPIsMP3xejQ8SHLOpeDick2ZERUNcJD2ob/9OJ
+				tFgwHsdm0WDOisMzkqbZyfJs4rlHpuOVTI9m30joupRAd/bleYwKrJDj2WAQ78HTfYqPLjhjgtQA
+				iTwOtEHMo7NAR86SzeCEVxFhdqLD8n1Fim6iz4CGIjU0sAHtLJxoCCADWmiVhpcyzR7+VAURNUVA
+				yMeAYF2BD3B/u70tg7YeePqBzGhbXtM4W//l92tYRHa6xB2GA5tpoqPBB9TwAdfBQdhEGsTmgfdA
+				xGyhUQU3Ka3NyWAiiJnjEWsXdRuUXF34S1/gHAS95K2Ffwx6FQ==|
+			)
+			(checksum "62B778AEA9DFA463F1FC9E370E09207B")
+		)
+		(file
+			(name "Sheet.kicad_wks")
 			(type worksheet)
 			(data |KLUv/WBPCK0SAEYZUSAQ1Q5qMaSOoRmHY7zfg9LTgIC0w162yfT6+B4RQOgA4EgAQwBIAJj7cby/
 				+EjVriZn3iKC3IojVatmH4nlh/wLAEBA0PG8l7PaJm8SLe6NnYkv+d916xhK626LTsqWFMvrnwIg
