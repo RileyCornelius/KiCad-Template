@@ -1,7 +1,7 @@
 {
   "jobs": [
     {
-      "description": "3D model export with components",
+      "description": "3D model with components .STEP",
       "id": "fbf49b5d-3acb-4213-8172-c99e9c9b7ba6",
       "settings": {
         "board_only": false,
@@ -23,22 +23,22 @@
         "include_unspecified": true,
         "occt_format": 0,
         "optimize_step": true,
-        "output_filename": "Assets/3D/${PROJECTNAME}-3D-Detailed.step",
+        "output_filename": "3D/${PROJECTNAME}-3D-Detailed.step",
         "overwrite": true,
         "subst_models": true,
         "use_defined_origin": false,
         "use_drill_origin": false,
         "use_grid_origin": false,
         "use_pcb_center_origin": true,
-        "user_origin.x": 148.6,
-        "user_origin.y": 106.4,
+        "user_origin.x": 142.55,
+        "user_origin.y": 108.8,
         "vrml_model_dir": "",
         "vrml_relative_paths": false
       },
       "type": "pcb_export_3d"
     },
     {
-      "description": "",
+      "description": "3D model .STEP",
       "id": "681fa529-af0d-4fe8-8683-f9fd8ac9f666",
       "settings": {
         "board_only": false,
@@ -60,7 +60,7 @@
         "include_unspecified": true,
         "occt_format": 0,
         "optimize_step": true,
-        "output_filename": "Assets/3D/${PROJECTNAME}-3D.step",
+        "output_filename": "3D/${PROJECTNAME}-3D.step",
         "overwrite": true,
         "subst_models": true,
         "use_defined_origin": false,
@@ -75,59 +75,7 @@
       "type": "pcb_export_3d"
     },
     {
-      "description": "",
-      "id": "d2c89c29-2f8c-400f-bbad-177ddc372ba9",
-      "settings": {
-        "anti_alias": true,
-        "bg_style": "default",
-        "description": "",
-        "floor": false,
-        "format": "png",
-        "height": 1600,
-        "light_bottom_intensity": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "light_camera_intensity": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "light_side_elevation": 60,
-        "light_side_intensity": [
-          0.5,
-          0.5,
-          0.5
-        ],
-        "light_top_intensity": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "output_filename": "Assets/Render/${PROJECTNAME}-Render.png",
-        "pan_x": 0.0,
-        "pan_y": 0.0,
-        "pan_z": 0.0,
-        "perspective": false,
-        "pivot_x": 0.0,
-        "pivot_y": 0.0,
-        "pivot_z": 0.0,
-        "post_process": false,
-        "preset": "",
-        "procedural_textures": false,
-        "quality": "basic",
-        "rotation_x": 0.0,
-        "rotation_y": 0.0,
-        "rotation_z": 0.0,
-        "side": "top",
-        "width": 2560,
-        "zoom": 1.0
-      },
-      "type": "pcb_render"
-    },
-    {
-      "description": "Export PCB PDF",
+      "description": "Export PCB .PDF",
       "id": "726f2f53-004e-42e6-9a9c-c56f5f398769",
       "settings": {
         "back_fp_property_popups": true,
@@ -196,7 +144,215 @@
       "type": "pcb_export_pdf"
     },
     {
-      "description": "Export Schematic PDF",
+      "description": "Render Top .PNG",
+      "id": "d2c89c29-2f8c-400f-bbad-177ddc372ba9",
+      "settings": {
+        "anti_alias": true,
+        "bg_style": "default",
+        "description": "",
+        "floor": false,
+        "format": "png",
+        "height": 1600,
+        "light_bottom_intensity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "light_camera_intensity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "light_side_elevation": 60,
+        "light_side_intensity": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "light_top_intensity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "output_filename": "Images/Render/${PROJECTNAME}-Render-Top.png",
+        "pan_x": 0.0,
+        "pan_y": 0.0,
+        "pan_z": 0.0,
+        "perspective": false,
+        "pivot_x": 0.0,
+        "pivot_y": 0.0,
+        "pivot_z": 0.0,
+        "post_process": false,
+        "preset": "",
+        "procedural_textures": false,
+        "quality": "basic",
+        "rotation_x": 0.0,
+        "rotation_y": 0.0,
+        "rotation_z": 0.0,
+        "side": "top",
+        "width": 2560,
+        "zoom": 1.0
+      },
+      "type": "pcb_render"
+    },
+    {
+      "description": "Render Top Angled .PNG",
+      "id": "b24562a2-2c2d-45d8-bbf0-5e3618c0d76b",
+      "settings": {
+        "anti_alias": true,
+        "bg_style": "default",
+        "description": "",
+        "floor": false,
+        "format": "png",
+        "height": 1080,
+        "light_bottom_intensity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "light_camera_intensity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "light_side_elevation": 60,
+        "light_side_intensity": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "light_top_intensity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "output_filename": "Images/Render/${PROJECTNAME}-Render-Top-Angled.png",
+        "pan_x": 0.0,
+        "pan_y": 0.0,
+        "pan_z": 0.0,
+        "perspective": false,
+        "pivot_x": 0.0,
+        "pivot_y": 0.0,
+        "pivot_z": 0.0,
+        "post_process": false,
+        "preset": "",
+        "procedural_textures": false,
+        "quality": "basic",
+        "rotation_x": -15.0,
+        "rotation_y": -10.0,
+        "rotation_z": -5.0,
+        "side": "top",
+        "width": 1920,
+        "zoom": 1.0
+      },
+      "type": "pcb_render"
+    },
+    {
+      "description": "Render Bottom .PNG",
+      "id": "dbddaacf-88bc-4aa4-9e9f-fc74d1276ce1",
+      "settings": {
+        "anti_alias": true,
+        "bg_style": "default",
+        "description": "",
+        "floor": false,
+        "format": "png",
+        "height": 1080,
+        "light_bottom_intensity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "light_camera_intensity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "light_side_elevation": 60,
+        "light_side_intensity": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "light_top_intensity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "output_filename": "Images/Render/${PROJECTNAME}-Render-Bottom.png",
+        "pan_x": 0.0,
+        "pan_y": 0.0,
+        "pan_z": 0.0,
+        "perspective": false,
+        "pivot_x": 0.0,
+        "pivot_y": 0.0,
+        "pivot_z": 0.0,
+        "post_process": false,
+        "preset": "",
+        "procedural_textures": false,
+        "quality": "basic",
+        "rotation_x": 0.0,
+        "rotation_y": 0.0,
+        "rotation_z": 0.0,
+        "side": "bottom",
+        "width": 1920,
+        "zoom": 1.0
+      },
+      "type": "pcb_render"
+    },
+    {
+      "description": "Render Bottom Angled .PNG",
+      "id": "599e782b-a0fb-4ac5-b9dc-0f98c962c0de",
+      "settings": {
+        "anti_alias": true,
+        "bg_style": "default",
+        "description": "",
+        "floor": false,
+        "format": "png",
+        "height": 1080,
+        "light_bottom_intensity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "light_camera_intensity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "light_side_elevation": 60,
+        "light_side_intensity": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "light_top_intensity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "output_filename": "Images/Render/${PROJECTNAME}-Render-Bottom-Angled.png",
+        "pan_x": 0.0,
+        "pan_y": 0.0,
+        "pan_z": 0.0,
+        "perspective": false,
+        "pivot_x": 0.0,
+        "pivot_y": 0.0,
+        "pivot_z": 0.0,
+        "post_process": false,
+        "preset": "",
+        "procedural_textures": false,
+        "quality": "basic",
+        "rotation_x": -15.0,
+        "rotation_y": -10.0,
+        "rotation_z": 5.0,
+        "side": "bottom",
+        "width": 1920,
+        "zoom": 1.0
+      },
+      "type": "pcb_render"
+    },
+    {
+      "description": "Export Schematic .PDF",
       "id": "d51667a3-4855-486b-911e-522fdd0b9d17",
       "settings": {
         "black_and_white": false,
@@ -220,7 +376,7 @@
       "type": "sch_export_plot_pdf"
     },
     {
-      "description": "Generate BOM",
+      "description": "Generate BOM .PDF",
       "id": "bef7019e-255a-4d81-9c5b-8eb30bbbd256",
       "settings": {
         "bom_format_preset_name": "CSV",
@@ -273,7 +429,7 @@
       "type": "sch_export_bom"
     },
     {
-      "description": "Generate iBOM",
+      "description": "Generate iBOM .HTML",
       "id": "5c91de2f-cda3-4a94-ba8c-b8603e3ebf98",
       "settings": {
         "command": "python \"${KICAD9_3RD_PARTY}/plugins/org_openscopeproject_InteractiveHtmlBom/generate_interactive_bom.py\" --dest-dir ${JOBSET_OUTPUT_WORK_PATH}/BOM --name-format \"%f-iBOM\" --no-browser --extra-fields \"MFR Part #\" --dnp-field \"kicad_dnp\" --extra-data-file ${PROJECTNAME}.kicad_pcb ${PROJECTNAME}.kicad_pcb",
