@@ -1,0 +1,122 @@
+(version 1)
+# Custom Design Rules (DRC) for KiCAD 9.0 (Stored in '<project>.kicad_dru' file).
+#
+# Configured for low cost manufacting from either JLCPCB or PCBWAY
+#
+# JLCPCB capabilities: https://jlcpcb.com/capabilities/pcb-capabilities
+# PCBWAY capabilities: https://www.pcbway.com/capabilities.html
+# KiCad documentation: https://docs.kicad.org/master/id/pcbnew/pcbnew_advanced.html#custom_design_rules
+
+# ----------------------------------- Minimum trace width and spacing --------------------
+
+# Works with 2 oz outer, could be 0.1 if 1 oz
+(rule "Minimum Trace Width and Spacing (outer layer)"
+	(layer outer)
+	(condition "A.Type == 'track'")
+	(constraint track_width (min 0.2mm))
+	(constraint clearance (min 0.2mm))
+)
+
+(rule "Minimum Trace Width and Spacing (inner layer)"
+	(layer inner)
+	(condition "A.Type == 'track'")
+	(constraint track_width (min 0.2mm))
+	(constraint clearance (min 0.2mm))
+)
+
+# ----------------------------------- Via hole/diameter size -------------------------------------------
+
+# Can go as low as 0.15mm for extra cost
+(rule "Hole diameter (mechanical)"
+	(constraint hole_size (min 0.3mm) (max 6.3mm))
+)
+
+(rule "Hole (NPTH) diameter"
+	(layer outer)
+	(condition "!A.isPlated()")
+	(constraint hole_size (min 0.5mm))
+)
+
+(rule "Hole (castellated) diameter"
+	(layer outer)
+	(condition "A.Type == 'pad' && A.Fabrication_Property == 'Castellated pad'")
+	(constraint hole_size (min 0.6mm))
+)
+
+(rule "Annular ring width (via and PTH)"
+	(layer outer)
+	(condition "A.isPlated()")
+	(constraint annular_width (min 0.15mm))
+)
+
+# ----------------------------------- Minimum clearance ------------------------------------------------
+
+(rule "Clearance: hole to hole (perimeter), different nets"
+	(layer outer)
+	(condition "A.Net != B.Net")
+	(constraint hole_to_hole (min 0.5mm))
+)
+
+(rule "Clearance: hole to hole (perimeter), same net"
+	(layer outer)
+	(condition "A.Net == B.Net")
+	(constraint hole_to_hole (min 0.254mm))
+)
+
+(rule "Clearance: track to NPTH hole (perimeter)"
+#	(condition "A.Pad_Type == 'NPTH, mechanical' && B.Type == 'track' && A.Net != B.Net")
+	(condition "!A.isPlated() && B.Type == 'track' && A.Net != B.Net")
+	(constraint hole_clearance (min 0.254mm))
+)
+
+(rule "Clearance: track to PTH hole perimeter"
+	(condition "A.isPlated() && B.Type == 'track' && A.Net != B.Net")
+	(constraint hole_clearance (min 0.33mm))
+)
+
+(rule "Clearance: track to pad"
+	(condition "A.Type == 'pad' && B.Type == 'track' &&  A.Net != B.Net")
+	(constraint clearance (min 0.2mm))
+)
+
+(rule "Clearance: pad/via to pad/via"
+	(layer outer)
+#	(condition "(A.Type == 'Pad' || A.Type == 'Via') && (B.Type == 'Pad' || B.Type == 'Via') && A.Net != B.Net")	
+	(condition "A.isPlated() && B.isPlated() && A.Net != B.Net")
+	(constraint clearance (min 0.2mm))
+)
+
+# ----------------------------------- Silkscreen ----------------------------------------------------
+
+(rule "Minimum Text"
+	(layer "?.Silkscreen")
+	(constraint text_thickness (min 0.15mm))
+	(constraint text_height (min 0.8mm))
+)
+
+(rule "Pad to Silkscreen"
+	(layer outer)
+	(constraint silk_clearance (min 0.12mm))
+	(condition "A.Type == 'pad' && (B.Type == 'text' || B.Type == 'graphic')")
+)
+
+# ----------------------------------- Board Outlines -------------------------------------
+
+(rule "Edge (routed) to track clearance"
+	(condition "A.Type == 'track'")
+	(constraint edge_clearance (min 0.3mm))
+)
+
+# ----------------------------------- Test Points Courtyard (Remove Warning) -----------------------------------------
+
+(rule "Test Point Courtyard Exclusion"
+	(constraint courtyard_clearance (min -1mm))
+	(condition "A.Reference =='TP*'")
+)
+
+# ----------------------------------- Fiducial Courtyard (Remove Warning) -------------------------------------------
+
+(rule "Test Point Courtyard Exclusion"
+	(constraint courtyard_clearance (min -1mm))
+	(condition "A.Reference =='FM*'")
+)
