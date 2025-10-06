@@ -971,7 +971,7 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/Lib/Custom/Custom.3dshapes/ESP32-S3-WROOM-1.step"
+		(model "${KIPRJMOD}/Lib/Custom.3dshapes/ESP32-S3-WROOM-1.step"
 			(offset
 				(xyz 0 0 0)
 			)
