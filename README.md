@@ -50,6 +50,12 @@ Project/
 └── README.md
 ```
 
+## Hotkeys
+
+Optionally use my custom KiCad hotkey bindings to speed up schematic and PCB work. The bindings and cheat sheet live here:
+
+- [KiCad-Hotkey-Binds](https://github.com/RileyCornelius/KiCad-Hotkey-Binds)
+
 ## Plugins
 
 ### Required Plugins for Document and Fabrication Generation
