@@ -7,23 +7,6 @@
 # PCBWAY capabilities: https://www.pcbway.com/capabilities.html
 # KiCad documentation: https://docs.kicad.org/master/id/pcbnew/pcbnew_advanced.html#custom_design_rules
 
-# ----------------------------------- Minimum trace width and spacing --------------------
-
-# Works with 2 oz outer, could be 0.1 if 1 oz
-(rule "Minimum Trace Width and Spacing (outer layer)"
-	(layer outer)
-	(condition "A.Type == 'track'")
-	(constraint track_width (min 0.2mm))
-	(constraint clearance (min 0.2mm))
-)
-
-(rule "Minimum Trace Width and Spacing (inner layer)"
-	(layer inner)
-	(condition "A.Type == 'track'")
-	(constraint track_width (min 0.2mm))
-	(constraint clearance (min 0.2mm))
-)
-
 # ----------------------------------- Via hole/diameter size -------------------------------------------
 
 # Can go as low as 0.15mm for extra cost
