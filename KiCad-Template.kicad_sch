@@ -56,17 +56,6 @@
 		)
 		(uuid "6abb43ce-9534-40a8-b172-ea0670ea89dd")
 	)
-	(text ""
-		(exclude_from_sim no)
-		(at 119.38 69.85 0)
-		(effects
-			(font
-				(size 7.62 7.62)
-				(color 162 22 34 1)
-			)
-		)
-		(uuid "dfc52baf-7934-4ed1-bb21-e6d5a13270dd")
-	)
 	(text "Page Title"
 		(exclude_from_sim no)
 		(at 14.605 24.13 0)
