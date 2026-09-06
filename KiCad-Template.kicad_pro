@@ -602,10 +602,10 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "PCB",
+      "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "3D/${PROJECTNAME}-3D-Detailed.step",
+      "step": "",
       "svg": "",
       "vrml": ""
     },

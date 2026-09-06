@@ -455,7 +455,31 @@
       "description": "Generate iBOM .HTML",
       "id": "5c91de2f-cda3-4a94-ba8c-b8603e3ebf98",
       "settings": {
-        "command": "python \"${KICAD9_3RD_PARTY}/plugins/org_openscopeproject_InteractiveHtmlBom/generate_interactive_bom.py\" --dest-dir ${JOBSET_OUTPUT_WORK_PATH}/BOM --name-format \"%f-iBOM\" --no-browser --extra-fields \"MFR Part #\" --dnp-field \"kicad_dnp\" --extra-data-file ${PROJECTNAME}.kicad_pcb ${PROJECTNAME}.kicad_pcb",
+        "command": "python tools/ibom.py \"${PROJECTNAME}.kicad_pcb\" \"${JOBSET_OUTPUT_WORK_PATH}.\"",
+        "description": "",
+        "ignore_exit_code": false,
+        "output_filename": "",
+        "record_output": false
+      },
+      "type": "special_execute"
+    },
+    {
+      "description": "Generate JLCPCB production files",
+      "id": "0a3f8b6e-4c1d-4e2a-9f7b-2d5c6e8a1b31",
+      "settings": {
+        "command": "python tools/fab.py \"${PROJECTNAME}.kicad_pcb\" \"${JOBSET_OUTPUT_WORK_PATH}.\" jlcpcb",
+        "description": "",
+        "ignore_exit_code": false,
+        "output_filename": "",
+        "record_output": false
+      },
+      "type": "special_execute"
+    },
+    {
+      "description": "Generate PCBWay production files",
+      "id": "0a3f8b6e-4c1d-4e2a-9f7b-2d5c6e8a1b32",
+      "settings": {
+        "command": "python tools/fab.py \"${PROJECTNAME}.kicad_pcb\" \"${JOBSET_OUTPUT_WORK_PATH}.\" pcbway",
         "description": "",
         "ignore_exit_code": false,
         "output_filename": "",
@@ -500,10 +524,23 @@
       "only": [
         "d51667a3-4855-486b-911e-522fdd0b9d17",
         "bef7019e-255a-4d81-9c5b-8eb30bbbd256",
-        "726f2f53-004e-42e6-9a9c-c56f5f398769"
+        "726f2f53-004e-42e6-9a9c-c56f5f398769",
+        "5c91de2f-cda3-4a94-ba8c-b8603e3ebf98"
       ],
       "settings": {
         "output_path": "${KIPRJMOD}\\docs"
+      },
+      "type": "folder"
+    },
+    {
+      "description": "Fabrication",
+      "id": "7b2e9c4d-1f6a-4d8e-b3c5-9a0e4f7d2c61",
+      "only": [
+        "0a3f8b6e-4c1d-4e2a-9f7b-2d5c6e8a1b31",
+        "0a3f8b6e-4c1d-4e2a-9f7b-2d5c6e8a1b32"
+      ],
+      "settings": {
+        "output_path": "${KIPRJMOD}\\manufacturing"
       },
       "type": "folder"
     }
