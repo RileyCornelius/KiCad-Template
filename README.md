@@ -38,12 +38,10 @@ Project/
 │   │   └── Render/
 │   ├── PCB/
 │   └── Schematic/
-├── Lib/                         # User-defined symbols, footprints, and 3D models
-│   └── Custom/
-│       ├── Custom.kicad_sym
-│       ├── Custom.pretty/
-│       └── Custom.3dshapes/
-├── Fab/                         # Fabrication gerbers, BOMs, and pick-and-place files
+├── lib/                         # User-defined symbols, footprints, and 3D models
+│   ├── 0_Project.kicad_sym
+│   ├── 0_Project.pretty/
+│   └── 0_Project.3dshapes/
 ├── Sheet.kicad_wks              # Minimal drawing sheet template
 ├── fp-lib-table                 # Footprint library table
 ├── sym-lib-table                # Symbol library table
