@@ -1,7 +1,7 @@
 (kicad_wks
 	(version 20231118)
 	(generator "pl_editor")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(setup
 		(textsize 1.5 1.5)
 		(linewidth 0.15)
@@ -120,7 +120,10 @@
 	)
 	(tbtext "${COMMENT1}"
 		(name "text9:Text")
-		(pos 24.99 13.1102)
+		(pos 24.99 17.1102)
+		(font
+			(size 2.032 2.032)
+		)
 		(justify center)
 		(maxlen 36)
 	)
@@ -131,19 +134,28 @@
 	)
 	(rect
 		(name "rect3:Rect")
-		(start 46.989 21.5722)
+		(start 46.989 25.5022)
 		(end 2 2.0022)
 	)
 	(tbtext "${TITLE}"
 		(name "text14:Text")
-		(pos 24.5 17.2702)
+		(pos 24.5 21.2702)
 		(font
 			(size 4 4) bold)
 		(justify center)
 		(maxlen 36)
 	)
-	(tbtext "Author: ${COMPANY}"
+	(tbtext "Designer: ${COMMENT2}"
 		(name "text8:Text")
-		(pos 45.989 10.0022)
+		(pos 45.989 10.002)
+	)
+	(line
+		(name "segm7:Line")
+		(start 46.989 14.5022)
+		(end 2 14.5002)
+	)
+	(tbtext "Company: ${COMPANY}"
+		(name "text8:Text")
+		(pos 45.989 13.002)
 	)
 )
